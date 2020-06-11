@@ -11,12 +11,12 @@ session_start();
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Inventory System</title>
+  <title>Cilindros de gas</title>
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-  <link rel="icon" href="vistas/img/plantilla/icono-negro.png">
+  <link rel="icon" href="vistas/img/plantilla/cilindroicono.png">
 
    <!--=====================================
   PLUGINS DE CSS
@@ -51,7 +51,8 @@ session_start();
 
   <!-- Morris chart -->
   <link rel="stylesheet" href="vistas/bower_components/morris.js/morris.css">
-
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="vistas/select2/css/select2.css">
   <!--=====================================
   PLUGINS DE JAVASCRIPT
   ======================================-->
@@ -100,8 +101,8 @@ session_start();
 
   <!-- ChartJS http://www.chartjs.org/-->
   <script src="vistas/bower_components/Chart.js/Chart.js"></script>
-
-
+    <!-- Select 2 -->
+    <script src="vistas/select2/js/select2.js"></script>
 
 
 </head>
@@ -145,6 +146,7 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "crear-venta" ||
          $_GET["ruta"] == "editar-venta" ||
          $_GET["ruta"] == "reportes" ||
+          $_GET["ruta"] == "detalle-venta" ||
          $_GET["ruta"] == "salir"){
 
         include "modulos/".$_GET["ruta"].".php";

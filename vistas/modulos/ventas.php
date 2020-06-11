@@ -95,6 +95,7 @@ if($xml){
            
            <th style="width:10px">#</th>
            <th>Código factura</th>
+             <th>Documento</th>
            <th>Cliente</th>
            <th>Vendedor</th>
            <th>Forma de pago</th>
@@ -137,7 +138,7 @@ if($xml){
                   $valorCliente = $value["id_cliente"];
 
                   $respuestaCliente = ControladorClientes::ctrMostrarClientes($itemCliente, $valorCliente);
-
+                  echo '<td>'.$respuestaCliente["documento"].'</td>';
                   echo '<td>'.$respuestaCliente["nombre"].'</td>';
 
                   $itemUsuario = "id";
@@ -171,7 +172,11 @@ if($xml){
 
                       echo '<button class="btn btn-warning btnEditarVenta" idVenta="'.$value["id"].'"><i class="fa fa-pencil"></i></button>
 
-                      <button class="btn btn-danger btnEliminarVenta" idVenta="'.$value["id"].'"><i class="fa fa-times"></i></button>';
+                      <button class="btn btn-danger btnEliminarVenta" idVenta="'.$value["id"].'"><i class="fa fa-times"></i></button>
+                      <button class="btn btn-info btnDetalleVenta" idVenta="'.$value["id"].'"><i class="fa fa-archive">Detalle</i></button>
+                      ';
+
+
 
                     }
 

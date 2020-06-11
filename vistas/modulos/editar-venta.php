@@ -117,7 +117,7 @@
 
                        foreach ($categorias as $key => $value) {
 
-                         echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                           echo '<option value="'.$value["id"].'">Doc:'.$value["documento"]."--Nom:".$value["nombre"].'</option>';
 
                        }
 

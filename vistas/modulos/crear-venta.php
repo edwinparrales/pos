@@ -42,7 +42,7 @@ if($_SESSION["perfil"] == "Especial"){
       EL FORMULARIO
       ======================================-->
       
-      <div class="col-lg-5 col-xs-12">
+      <div class="col-lg-6 col-xs-12">
         
         <div class="box box-success">
           
@@ -128,7 +128,7 @@ if($_SESSION["perfil"] == "Especial"){
                     
                     <span class="input-group-addon"><i class="fa fa-users"></i></span>
                     
-                    <select class="form-control" id="seleccionarCliente" name="seleccionarCliente" required>
+                    <select class="form-control seleccionarCliente" id="seleccionarCliente" name="seleccionarCliente" required>
 
                     <option value="">Seleccionar cliente</option>
 
@@ -141,7 +141,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                        foreach ($categorias as $key => $value) {
 
-                         echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                         echo '<option value="'.$value["id"].'">Doc:'.$value["documento"]."--Nom:".$value["nombre"].'</option>';
 
                        }
 
@@ -202,7 +202,7 @@ if($_SESSION["perfil"] == "Especial"){
                             
                             <div class="input-group">
                            
-                              <input type="number" class="form-control input-lg" min="0" id="nuevoImpuestoVenta" name="nuevoImpuestoVenta" placeholder="0" required>
+                              <input type="number" class="form-control input-lg" min="0" id="nuevoImpuestoVenta" name="nuevoImpuestoVenta" placeholder="0" required value="0">
 
                                <input type="hidden" name="nuevoPrecioImpuesto" id="nuevoPrecioImpuesto" required>
 
@@ -297,7 +297,7 @@ if($_SESSION["perfil"] == "Especial"){
       LA TABLA DE PRODUCTOS
       ======================================-->
 
-      <div class="col-lg-7 hidden-md hidden-sm hidden-xs">
+      <div class="col-lg-6 hidden-md hidden-sm hidden-xs">
         
         <div class="box box-warning">
 

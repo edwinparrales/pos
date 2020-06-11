@@ -769,8 +769,8 @@ IMPRIMIR FACTURA
 $(".tablas").on("click", ".btnImprimirFactura", function(){
 
 	var codigoVenta = $(this).attr("codigoVenta");
-
-	window.open("extensiones/tcpdf/pdf/factura.php?codigo="+codigoVenta, "_blank");
+    console.info( `funcion en desarrollo ${codigoVenta}`);
+	//window.open("extensiones/tcpdf/pdf/factura-carta.php?codigo="+codigoVenta, "_blank");
 
 })
 
@@ -882,5 +882,23 @@ $(".abrirXML").click(function(){
 
 
 })
+/*=============================================
+Buscador de cliente con select2
+=============================================*/
+
+$(document).ready(function() {
+	$('#seleccionarCliente').select2();
+	console.info("selext");
+});
+
+/*=============================================
+BOTON DETALLE VENTA
+=============================================*/
+$(".tablas").on("click", ".btnDetalleVenta", function(){
+
+	var idVenta = $(this).attr("idVenta");
+
+	window.location = "index.php?ruta=detalle-venta&idVenta="+idVenta;
 
 
+})
