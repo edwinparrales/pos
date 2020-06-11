@@ -74,7 +74,7 @@ $listaProducto = json_decode($venta["productos"], true);
         </div>
 
         <div class="card">
-            <h3 class="card-header">Detalles de la compra</h3>
+            <h3 class="card-header">Detalles de la compra -Orden No. <?php echo $venta["codigo"]?></h3>
             <?php echo "<h4>Fecha:".$venta["fecha"]."</h4>";?>
             <div class="card-body">
 
@@ -116,7 +116,7 @@ $listaProducto = json_decode($venta["productos"], true);
                         <td></td>
                         <td></td>
                         <td><h4 style="font-weight: bold;color: #0b93d5">Total:$</h4></td>
-                        <td><h4 style="font-weight: bold;color: darkred"><?php echo $venta["neto"] ?></h4></td>
+                        <td><input  id="nuevoTotalVenta" class="input-lg " type="text" value="<?php echo $venta["neto"] ?>" readonly></td>
                     </tr>
                     </tfoot>
                 </table>
