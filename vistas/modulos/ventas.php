@@ -95,7 +95,7 @@ if($xml){
            
            <th style="width:10px">#</th>
            <th>Código factura</th>
-             <th>Documento</th>
+           <th>Documento</th>
            <th>Cliente</th>
            <th>Vendedor</th>
            <th>Forma de pago</th>
